@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'pixel';
+  src: url('./assets/arcadeclassic.regular.eot'); /* IE9 Compat Modes */
+  src: url('./assets/arcadeclassic.regular.eot?#iefix')
+      format('embedded-opentype'),
+    /* Modern Browsers */ url('./assets/arcadeclassic.regular.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('./assets/arcadeclassic.regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+body {
+  font-family: 'pixel', Fallback, sans-serif;
+  image-rendering: pixelated;
+}
+
+#start-screen {
+  position: relative;
+  width: 1024px;
+  height: 512px;
+  background-color: lightblue;
+  margin: 0 auto;
+  text-align: left;
+  background-image: url('./assets/grass.png');
+  background-repeat: repeat-x;
+  background-size: 256px;
+  background-position: bottom;
+}
+
+#start-screen p {
+  letter-spacing: 3px;
+  padding: 10px 50px;
+  font-size: 24px;
+  height: 256px;
+  color: #ffffff;
+}
+
+#start-screen span {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-weight: bold;
+  color: #000000;
+  margin: 0 -10px;
+}
+
+#start-screen input {
+  font-family: 'pixel', Fallback, sans-serif;
+  font-size: 32px;
+  background-color: lightblue;
+  border: none;
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  bottom: 75px;
+  right: 25px;
+}
+
+#game-screen {
+  position: relative;
+  width: 1024px;
+  height: 512px;
+  background-color: lightblue;
+  margin: 0 auto;
+}
+
+#error-message {
+  position: absolute;
+  top: 128px;
+  left: 0;
+  z-index: 12;
+  text-align: center;
+  width: 100%;
+  color: red;
+  font-size: 32px;
+  letter-spacing: 3px;
+}
+
+#winner-message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  text-align: center;
+  width: 100%;
+  color: yellow;
+  font-size: 128px;
+  letter-spacing: 3px;
+}
+
+#winner-message span {
+  position: absolute;
+  bottom: -128px;
+  left: 0;
+  width: 100%;
+  background-color: #999999;
+  color: #ffffff;
+  font-size: 64px;
+}
+
+#attempts-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 16px;
+  font-size: 32px;
+}
+
+#input-container {
+  padding: 10px 0;
+  margin: 0 auto;
+  width: 1024px;
+  text-align: center;
+  background-color: #3b7d4f;
+}
+
+#input-container input {
+  width: 158px;
+  height: 75px;
+  font-size: 65px;
+  border: 4px solid #63ab3f;
+}
+
+#grass {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 256px;
+  background-image: url('./assets/grass.png');
+  background-repeat: repeat-x;
+  background-size: 256px;
+}
+
+#fence {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 8;
+  width: 100%;
+  height: 256px;
+  background-image: url('./assets/fence.png');
+  background-repeat: repeat-x;
+  background-size: 256px;
+}
+
+.entity {
+  position: absolute;
+  bottom: 0;
+  z-index: 6;
+  width: 256px;
+  height: 256px;
+  background-size: 256px;
+}
+
+#entity0 {
+  left: 0;
+}
+
+#entity1 {
+  left: 256px;
+}
+
+#entity2 {
+  left: 512px;
+}
+
+#entity3 {
+  left: 768px;
+}
+
+.cow {
+  background-image: url('./assets/cowBody.png');
+}
+
+.bull {
+  background-image: url('./assets/bullBody.png');
+}
+
+#history {
+  width: 512;
+  margin: 0 auto;
+  height: 192px;
+  margin-top: 24px;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+#history::-webkit-scrollbar {
+  display: none;
+}
+
+.history-entry {
+  height: auto;
+}
+
+.history-pic {
+  height: 64px;
+  width: 64px;
+  background-size: 100%;
+  display: inline-block;
+}
+
+.history-guess {
+  display: inline-block;
+  font-size: 96px;
+  margin-right: 16px;
+  line-height: 64px;
+}

@@ -1,0 +1,52 @@
+<hmtl>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="./main.css">
+    </head>
+
+    <body>
+
+
+        <div  id="start-screen">
+            <p id="instructions">
+                <span>Description:</span>
+                Cows and Bulls is a guessing game where you use feedback from the cows and bulls to help guess the magic number.
+                
+                <span>Rules:</span>
+                Guess must be 4 unique digits 0-9
+                <br>
+                <br>
+                If you see a Cow, it means you have the right number in the wrong location.
+                <br>
+                <br>
+                If you see a Bull it means you have the right number in the right location.
+                <br>
+                <br>
+                Use that logic to get 4 bulls and match the number.
+
+            </p>
+            <input id="play" type="button" value="Play">
+        </div>
+        <div id="game-screen" style="display: none;">
+            <div id="attempts-container">Attempts: <span id="attempts"></span></div>
+            <div id="grass" style="display: none;"></div>
+            <div id="fence" style="display: none;"></div>
+            <div class="entity" id="entity0"></div>
+            <div class="entity" id="entity1"></div>
+            <div class="entity" id="entity2"></div>
+            <div class="entity" id="entity3"></div>
+            <p id="error-message" style="display: none;"></p>
+            <div id="winner-message" style="display: none;">
+                <p> WINNER</p>
+                <span id="play-again">play again</span>
+            </div>
+        </div>
+
+        <div id=input-container style="display: none;">
+            <input id="user-guess" type="text" maxlength="4">
+        </div>
+        <div id="history"></div>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</hmtl>
