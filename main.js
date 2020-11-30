@@ -35,7 +35,7 @@ $(document).ready(function() {
     // it puts your guess plus the amount of cows and bulls you had in
     function makeHistory(guess, cows, bulls) {
         // The start of the html string containing users guess
-        htmlString = `<div class="history-guess">${guess}</div>`;
+        var htmlString = `<div class="history-guess">${guess}</div>`;
         // we need to know how many times total to loop so we add cows and bull
         var total = cows + bulls;
         for ( var j = 0; j < total; j++) {
@@ -189,7 +189,7 @@ $(document).ready(function() {
 
     // runs the game logic
     function play() {
-        input = $("#user-guess").val();
+        var input = $("#user-guess").val();
         checkNumbers(input);
     }
 
